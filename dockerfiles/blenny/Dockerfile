@@ -27,11 +27,15 @@ RUN \
 RUN \
     cd /var/www/html && \
     git clone git://github.com/box/Anemometer.git anemometer && \
-    cd anemometer/conf && \
+    cd anemometer && \
+    service mysql start && \
+    mysql < install.sql && \
+    cd conf && \
     cp sample.config.inc.php config.inc.php
 
 # Start stuff
 CMD \
+    service mysql start && \
     apachectl -D FOREGROUND
 
 EXPOSE 80
