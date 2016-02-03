@@ -24,14 +24,14 @@ RUN \
     apt-get install -y percona-toolkit
 
 # Install anemometer
-# RUN \
-#     cd /var/www/html && \
-#     git clone git://github.com/box/Anemometer.git anemometer && \
-#     cd anemometer/conf && \
-#     cp sample.config.inc.php config.inc.php
+RUN \
+    cd /var/www/html && \
+    git clone git://github.com/box/Anemometer.git anemometer && \
+    cd anemometer/conf && \
+    cp sample.config.inc.php config.inc.php
 
 # Start stuff
-ENTRYPOINT \
-    apachectl start
+CMD \
+    apachectl -D FOREGROUND
 
 EXPOSE 80
