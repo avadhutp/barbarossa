@@ -7,8 +7,7 @@ LABEL description="To test out anemometer+mysql monitoring; especially, slow que
 # Install basic dependencies
 RUN \
     apt-get install -y git && \
-    apt-get install -y emacs && \
-    apt-get install -y openssh-server apache2 php5 php5-cli libapache2-mod-php5 php5-gd php5-json php5-mysql
+    apt-get install -y apache2 php5 php5-cli libapache2-mod-php5 php5-gd php5-json php5-mysql
 
 # Install MySQL
 RUN \ 
