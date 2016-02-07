@@ -16,4 +16,5 @@ RUN \
     mkdir /tmp/lazarus && \
     touch /etc/lazarus.ini && \
     echo "tmp_location = /tmp/lazarus/" >> /etc/lazarus.ini && \
-    echo "player_cmd = cvlc --play-and-exit" >> /etc/lazarus.ini && \
+    echo "player_cmd = cvlc --play-and-exit" >> /etc/lazarus.ini
+
