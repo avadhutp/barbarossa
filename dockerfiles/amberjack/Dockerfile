@@ -8,3 +8,10 @@ LABEL description="Enjoy lazarus. Plays music on running."
 RUN \
     apt-get update && \
     apt-get install -y golang vlc
+
+# Put in lazarus pre-requisites
+RUN \
+    mkdir /tmp/lazarus && \
+    touch /etc/lazarus.ini && \
+    echo "tmp_location = /tmp/lazarus/" >> /etc/lazarus.ini && \
+    echo "player_cmd = cvlc --play-and-exit" >> /etc/lazarus.ini && \
