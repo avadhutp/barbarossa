@@ -7,7 +7,8 @@ LABEL description="Enjoy lazarus. Plays music on running."
 # Install basic dependencies
 RUN \
     apt-get update && \
-    apt-get install -y golang vlc git && \
+    apt-get install -y golang vlc git python-pip && \
+    pip install -U youtube-dl && \
     mkdir /gocode && \
     export GOPATH=/gocode
 
