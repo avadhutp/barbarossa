@@ -9,8 +9,11 @@ RUN \
     apt-get update && \
     apt-get install -y golang vlc git python-pip && \
     pip install -U youtube-dl && \
-    mkdir /gocode && \
-    export GOPATH=/gocode
+    mkdir /gocode
+
+# Set paths
+ENV GOPATH /gocode
+ENV PATH /gocode/bin:$PATH
 
 # Put in lazarus pre-requisites
 RUN \
