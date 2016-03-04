@@ -28,9 +28,10 @@ RUN \
     git clone git://github.com/box/Anemometer.git anemometer && \
     cd anemometer && \
     service mysql start && \
-    mysql < install.sql && \
-    cd conf && \
-    cp sample.config.inc.php config.inc.php
+    mysql < install.sql
+
+# Install anemometer config with the correct db connection
+COPY dockerfiles/ibex/conf/config.inc.php /var/www/html/anemometer/conf/config.inc.php
 
 # Start stuff
 CMD \
