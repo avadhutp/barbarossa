@@ -33,9 +33,14 @@ RUN \
 # Install anemometer config with the correct db connection
 COPY dockerfiles/ibex/conf/config.inc.php /var/www/html/anemometer/conf/config.inc.php
 
+# Move apache to port 8888
+RUN sed -i 's/Listen 80/Listen 8888/g' /etc/apache2/ports.conf && \
+    rm /etc/apache2/sites-enabled/000-default.conf
+COPY dockerfiles/ibex/conf/anemometer-virtualhost.conf /etc/apache2/sites-enabled/000-anemometer.conf
+
 # Start stuff
 CMD \
     service mysql start && \
     apachectl -D FOREGROUND
 
-EXPOSE 80
+EXPOSE 8888
