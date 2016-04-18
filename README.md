@@ -22,4 +22,5 @@
 | Command | description |
 |---------|-------------|
 | `healthcheck` | Runs checks to see if anemometer, jira, and other associated systems are working correctly. |
+| `frequency_check` | Identifies frequency queries. For more options for this command [see this](https://github.com/avadhutp/query_monitor#frequency_check). |
 
