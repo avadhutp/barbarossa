@@ -1,0 +1,8 @@
+anemometer_url: https://your.anemometer.instance/
+
+jira:
+    url: https://issues.jira.com/
+    user: username
+    pass: password
+    project: 13100 # Corresponds to the project ID in JIRA
+    issue_type: 1 # Corresponds to type of issue in JIRA; for example, bug, task, improvement, etc.

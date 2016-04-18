@@ -11,3 +11,9 @@
 [![ibex](http://dockeri.co/image/avadhutp/amberjack)](https://hub.docker.com/r/avadhutp/amberjack/)
 
 1. Runs [lazarus](https://github.com/avadhutp/lazarus)—a terminal-based music app written in go 
+
+## avadhutp/springhare
+[![springhare](http://dockeri.co/image/avadhutp/springhare)](https://hub.docker.com/r/avadhutp/springhare/)
+
+1. Runs [query_monitor](https://github.com/avadhutp/query_monitor)—a collection of recipes running atop [anemometer](https://github.com/box/anemometer)
+2. Before you begin, make sure you rename and modify the `conf/query_monitor.yaml.example` to `conf/query_monitor.yaml`.
