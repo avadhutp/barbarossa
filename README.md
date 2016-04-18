@@ -15,10 +15,11 @@
 ## avadhutp/springhare
 [![springhare](http://dockeri.co/image/avadhutp/springhare)](https://hub.docker.com/r/avadhutp/springhare/)
 
-### Introduction
 1. Runs [query_monitor](https://github.com/avadhutp/query_monitor)—a collection of recipes running atop [anemometer](https://github.com/box/anemometer)
 1. Before you begin, make sure you rename and modify the `conf/query_monitor.yaml.example` to `conf/query_monitor.yaml`.
 1. How to run: `docker run -t avadhutp/springhare`
-|| Command || description ||
+
+| Command | description |
+|---------|-------------|
 | `healthcheck` | Runs checks to see if anemometer, jira, and other associated systems are working correctly. |
 
