@@ -1,3 +1,9 @@
+## avadhutp/abba
+1. Used for testing uWSGI + mod_proxy_uwsgi
+1. To build: `docker build -t abba -f dockerfiles/abba/Dockerfile .`
+1. To run: `docker run -p 8888:8888 -d abba:latest`
+1. Then, in your browser, go to `http://your-docker-host-ip:8888`
+
 ## avadhutp/ibex
 [![ibex](http://dockeri.co/image/avadhutp/ibex)](https://hub.docker.com/r/avadhutp/ibex/)
 
